@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piyush Bhardwaj | Full Stack Developer & AI Enthusiast</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Piyush<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#achievements">Highlights</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact" class="nav-cta">Contact Me</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-section">
+        <div class="hero-content reveal">
+            <p class="greeting">Hi, my name is</p>
+            <h1 class="name">Piyush Bhardwaj.</h1>
+            <h2 class="role">Full Stack Developer <span class="divider">|</span> <span class="gradient-text typed-text"></span><span class="cursor">&nbsp;</span></h2>
+            <p class="tagline">I build scalable backend systems and AI-powered applications that solve real-world problems.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+            <p style="margin-top: 20px; color: var(--accent-blue); font-weight: 500;">
+                Open to internships • Let's connect 🚀
+            </p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="section-container reveal">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! I'm a Computer Science student and an aspiring Full Stack Developer with a deep passion for backend systems and Artificial Intelligence.</p>
+                    <p>I specialize in building robust, scalable applications using technologies like <strong>Java, Spring Boot, Node.js, and React</strong>. I also love exploring AI, diving into machine learning models, and integrating AI capabilities into modern web applications.</p>
+                    <p>Whether it's designing complex database schemas with <strong>SQL</strong>, optimizing <strong>Data Structures</strong>, or crafting seamless user interfaces, I enjoy every aspect of software development.</p>
+                    <p class="hiring-hook" style="margin-top: 1.5rem; color: var(--accent-blue);"><strong>Currently seeking internship opportunities in backend development and AI systems.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements / Highlights Section -->
+    <section id="achievements" class="achievements-section">
+        <div class="section-container reveal">
+            <h2 class="section-title">Achievements & Highlights</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="icon-container"><i class="fa-solid fa-code"></i></div>
+                    <h3>Problem Solver</h3>
+                    <p>Solved <strong>200+ Data Structures & Algorithms</strong> problems, mastering complex algorithmic challenges.</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="icon-container"><i class="fa-solid fa-brain"></i></div>
+                    <h3>AI Developer</h3>
+                    <p>Built <strong>PictoAI</strong>, a robust AI-based text-to-image generation system using Transformers.</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="icon-container"><i class="fa-solid fa-microscope"></i></div>
+                    <h3>Researcher</h3>
+                    <p>Published research and implemented cutting-edge <strong>deepfake detection</strong> algorithms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="section-container reveal">
+            <h2 class="section-title">Featured Projects</h2>
+            
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ai">AI</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+            </div>
+
+            <div class="projects-grid">
+                
+                <!-- Project 1: PictoAI -->
+                <div class="project-card filter-item" data-category="ai">
+                    <div class="project-image">
+                        <img src="images/pictoai.png" alt="PictoAI Interface">
+                        <div class="project-links-overlay">
+                            <a href="https://github.com/piyushxbhardwaj/pictoai" target="_blank" class="icon-link" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">PictoAI</h3>
+                        <p class="project-description">
+                            <strong>Problem:</strong> Creators lack fast, accessible tools to generate custom visuals on demand.<br>
+                            <strong>Solution:</strong> Generated high-quality images from natural language descriptions using Hugging Face Transformers with real-time API integration.
+                        </p>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem;"><strong>Built with:</strong></p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>MongoDB</span>
+                            <span>Stable Diffusion</span>
+                        </div>
+                        <a href="https://github.com/piyushxbhardwaj/pictoai" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem; margin-top: 1.5rem;"><i class="fa-brands fa-github"></i> View Code</a>
+                        <a href="#" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem; margin-top: 1.5rem; margin-left: 0.5rem;"><i class="fa-solid fa-play"></i> Demo (Coming Soon)</a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Order Creation API -->
+                <div class="project-card filter-item" data-category="backend">
+                    <div class="project-image">
+                        <img src="images/order_api.png" alt="Order Creation API Dashboard">
+                        <div class="project-links-overlay">
+                            <a href="https://github.com/piyushxbhardwaj/order-api" target="_blank" class="icon-link" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Order Creation API</h3>
+                        <p class="project-description">
+                            <strong>Problem:</strong> E-commerce platforms struggle with data consistency and race conditions during high-volume checkouts.<br>
+                            <strong>Solution:</strong> Engineered a highly available REST API handling high-volume requests with efficient validation, ensuring reliable transaction and seamless database interactions.
+                        </p>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem;"><strong>Built with:</strong></p>
+                        <div class="tech-stack">
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>SQL</span>
+                        </div>
+                        <a href="https://github.com/piyushxbhardwaj/order-api" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem; margin-top: 1.5rem;"><i class="fa-brands fa-github"></i> View Code</a>
+                        <a href="#" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem; margin-top: 1.5rem; margin-left: 0.5rem;"><i class="fa-solid fa-play"></i> Demo (Coming Soon)</a>
+                    </div>
+                </div>
+
+                <!-- Project 3: AetherGuard -->
+                <div class="project-card filter-item" data-category="ai">
+                    <div class="project-image">
+                        <img src="images/aetherguard.png" alt="AetherGuard Deepfake Detection Interface">
+                        <div class="project-links-overlay">
+                            <a href="https://github.com/piyushxbhardwaj/AetherGuard-Forensi" target="_blank" class="icon-link" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">AetherGuard Forensics</h3>
+                        <p class="project-description">
+                            <strong>Problem:</strong> The rise of deepfakes poses a significant threat to media authenticity and online security.<br>
+                            <strong>Solution:</strong> Developed a robust deep learning forensics engine capable of detecting synthetic media anomalies with high accuracy.
+                        </p>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem;"><strong>Built with:</strong></p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>FastAPI</span>
+                            <span>Deep Learning</span>
+                        </div>
+                        <a href="https://github.com/piyushxbhardwaj/AetherGuard-Forensi" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem; margin-top: 1.5rem;"><i class="fa-brands fa-github"></i> View Code</a>
+                        <a href="#" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem; margin-top: 1.5rem; margin-left: 0.5rem;"><i class="fa-solid fa-play"></i> Demo (Coming Soon)</a>
+                    </div>
+                </div>
+
+                <!-- Project 4: Fraud Detection -->
+                <div class="project-card filter-item" data-category="ai">
+                    <div class="project-image">
+                        <img src="images/fraud_detection.png" alt="Fraud Detection Dashboard">
+                        <div class="project-links-overlay">
+                            <a href="https://github.com/piyushxbhardwaj/fraud-detection" target="_blank" class="icon-link">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Credit Card Fraud Detection</h3>
+                        <p class="project-description">
+                            Built a machine learning model to detect fraudulent transactions from a dataset of 280,000+ records. <strong>Achieved 95% accuracy, reduced false positives by 15%, and enabled 40% faster analysis</strong> using optimized feature engineering and EDA techniques.
+                        </p>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem;"><strong>Built with:</strong></p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>Scikit-Learn</span>
+                        </div>
+                        <a href="https://github.com/piyushxbhardwaj/fraud-detection" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem; margin-top: 1.5rem;"><i class="fa-brands fa-github"></i> View Code</a>
+                        <a href="#" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem; margin-top: 1.5rem; margin-left: 0.5rem;"><i class="fa-solid fa-play"></i> Demo (Coming Soon)</a>
+                    </div>
+                </div>
+
+                <!-- Project 5: Ecommerce -->
+                <div class="project-card filter-item" data-category="frontend">
+                    <div class="project-image">
+                        <img src="images/ecommerce.png" alt="EliteKicks ecommerce platform UI">
+                        <div class="project-links-overlay">
+                            <a href="https://github.com/piyushxbhardwaj/ecommerce" target="_blank" class="icon-link">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">EliteKicks E-commerce</h3>
+                        <p class="project-description">
+                            Developed a responsive e-commerce platform with product catalog and optimized UI. <strong>Achieved 30% faster load time and ensured seamless user navigation by testing across 5+ devices.</strong>
+                        </p>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem;"><strong>Built with:</strong></p>
+                        <div class="tech-stack">
+                            <span>React</span>
+                            <span>JavaScript</span>
+                            <span>CSS</span>
+                        </div>
+                        <a href="https://github.com/piyushxbhardwaj/ecommerce" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem; margin-top: 1.5rem;"><i class="fa-brands fa-github"></i> View Code</a>
+                        <a href="https://piyushxbhardwaj.github.io/EliteKIcks-An-E-commerce-Website/" target="_blank" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem; margin-top: 1.5rem; margin-left: 0.5rem;"><i class="fa-solid fa-play"></i> Live Demo</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="section-container reveal">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-wrapper">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span><i class="fa-brands fa-java skill-icon"></i> Java</span>
+                        <span><i class="fa-brands fa-python skill-icon"></i> Python</span>
+                        <span><i class="fa-solid fa-code skill-icon"></i> C++</span>
+                        <span><i class="fa-solid fa-c skill-icon"></i> C</span>
+                        <span><i class="fa-solid fa-database skill-icon"></i> SQL</span>
+                        <span><i class="fa-brands fa-js skill-icon"></i> JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-tags">
+                        <span><i class="fa-brands fa-react skill-icon"></i> React</span>
+                        <span><i class="fa-solid fa-wind skill-icon"></i> Tailwind CSS</span>
+                        <span><i class="fa-brands fa-html5 skill-icon"></i> HTML5</span>
+                        <span><i class="fa-brands fa-css3-alt skill-icon"></i> CSS3</span>
+                        <span><i class="fa-brands fa-js skill-icon"></i> Vanilla JS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-tags">
+                        <span><i class="fa-brands fa-node skill-icon"></i> Node.js</span>
+                        <span><i class="fa-brands fa-node-js skill-icon"></i> Express.js</span>
+                        <span><i class="fa-solid fa-leaf skill-icon"></i> Spring Boot</span>
+                        <span><i class="fa-solid fa-server skill-icon"></i> REST APIs</span>
+                        <span><i class="fa-brands fa-docker skill-icon"></i> Microservices</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Others</h3>
+                    <div class="skill-tags">
+                        <span><i class="fa-brands fa-git-alt skill-icon"></i> Git & GitHub</span>
+                        <span><i class="fa-brands fa-docker skill-icon"></i> Docker</span>
+                        <span><i class="fa-solid fa-paper-plane skill-icon"></i> Postman</span>
+                        <span><i class="fa-solid fa-brain skill-icon"></i> Scikit-Learn</span>
+                        <span><i class="fa-solid fa-diagram-project skill-icon"></i> Data Structures</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Education & Credentials Section -->
+    <section id="education" class="about-section" style="padding-top: 0;">
+        <div class="section-container reveal">
+            <h2 class="section-title">Education & Credentials</h2>
+            <div class="skills-wrapper" style="margin-top: 2rem;">
+                <div class="skill-category" style="flex: 1; min-width: 300px;">
+                    <h3><i class="fa-solid fa-graduation-cap" style="color: var(--accent-blue); margin-right: 0.5rem;"></i> Education</h3>
+                    <div style="margin-top: 1.5rem;">
+                        <h4 style="color: var(--text-primary); font-size: 1.1rem; margin-bottom: 0.25rem;">B.E. Computer Science</h4>
+                        <p style="color: var(--accent-purple); font-weight: 500; margin-bottom: 0.25rem;">Chitkara University</p>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">2022 – 2026</p>
+                    </div>
+                </div>
+                <div class="skill-category" style="flex: 1; min-width: 300px;">
+                    <h3><i class="fa-solid fa-certificate" style="color: var(--accent-blue); margin-right: 0.5rem;"></i> Certifications</h3>
+                    <ul style="margin-top: 1.5rem; list-style: none; padding: 0; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li><i class="fa-solid fa-check" style="color: var(--accent-purple); margin-right: 0.5rem;"></i> Generative AI – Google Cloud</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--accent-purple); margin-right: 0.5rem;"></i> Cyber Security – Cisco</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--accent-purple); margin-right: 0.5rem;"></i> Google Analytics – Google</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--accent-purple); margin-right: 0.5rem;"></i> AI Foundations – IBM</li>
+                    </ul>
+                </div>
+                <div class="skill-category" style="flex: 1; min-width: 300px;">
+                    <h3><i class="fa-solid fa-book" style="color: var(--accent-blue); margin-right: 0.5rem;"></i> Coursework</h3>
+                    <div class="skill-tags" style="margin-top: 1.5rem;">
+                        <span>Operating Systems</span>
+                        <span>DBMS</span>
+                        <span>Computer Networks</span>
+                        <span>OOP</span>
+                        <span>Software Engineering</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- GitHub Section -->
+    <section id="github" class="about-section">
+        <div class="section-container reveal" style="text-align: center;">
+            <h2 class="section-title">GitHub Profile</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                Explore my projects, contributions, and code repositories on GitHub.
+            </p>
+            
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
+                <img src="https://github-readme-stats.vercel.app/api?username=piyushxbhardwaj&show_icons=true&theme=tokyonight" alt="GitHub Stats" style="max-width: 100%; height: auto; border-radius: 8px;">
+                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=piyushxbhardwaj&layout=compact&theme=tokyonight" alt="Top Languages" style="max-width: 100%; height: auto; border-radius: 8px;">
+            </div>
+
+            <a href="https://github.com/piyushxbhardwaj" target="_blank" class="btn btn-primary">
+                <i class="fa-brands fa-github" style="margin-right: 8px;"></i> Visit My GitHub
+            </a>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume-section">
+        <div class="section-container reveal">
+            <div class="resume-box">
+                <h2>Want to see more?</h2>
+                <p>Check out my full resume for a comprehensive overview of my experience, education, and skills.</p>
+                <a href="resume.pdf" download class="btn btn-primary btn-large">
+                    <i class="fa-solid fa-download"></i> Download Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <footer id="contact" class="contact-section">
+        <div class="section-container reveal">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-text">I'm currently looking for new opportunities. Whether you have a question, an internship offer, or just want to say hi, I'll try my best to get back to you!</p>
+            
+            <div class="contact-links">
+                <a href="mailto:piyushbhardwaj634@gmail.com" class="contact-card">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>Email Me</span>
+                </a>
+                <a href="tel:+919518196142" class="contact-card">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Call Me</span>
+                </a>
+                <a href="https://www.linkedin.com/in/piyushxbhardwaj/" target="_blank" class="contact-card">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/piyushxbhardwaj" target="_blank" class="contact-card">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+            
+            <div class="footer-bottom">
+                <p style="margin-bottom: 0.5rem; color: var(--accent-blue);"><strong>Open to internships | Available immediately</strong></p>
+                <p>Designed & Built by Piyush Bhardwaj</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
