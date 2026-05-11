@@ -410,6 +410,197 @@ ul {
     border-radius: 20px;
 }
 
+/* Research Section */
+.research-section {
+    padding: var(--section-padding);
+}
+
+.section-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    max-width: 700px;
+}
+
+.publication-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.publication-card {
+    display: flex;
+    background: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    transition: all var(--transition-medium);
+    position: relative;
+}
+
+.publication-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 0 20px 50px -15px rgba(59, 130, 246, 0.2);
+}
+
+.publication-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(circle at top right, rgba(168, 85, 247, 0.1), transparent);
+    pointer-events: none;
+}
+
+.publication-image {
+    flex: 1;
+    min-width: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+.publication-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-medium);
+}
+
+.publication-card:hover .publication-image img {
+    transform: scale(1.05);
+}
+
+.publication-content {
+    flex: 1.5;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.publication-badge {
+    display: inline-block;
+    width: fit-content;
+    padding: 0.4rem 1rem;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--accent-blue);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.1);
+    animation: badgePulse 3s infinite;
+}
+
+@keyframes badgePulse {
+    0% { box-shadow: 0 0 5px rgba(59, 130, 246, 0.2); }
+    50% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.4); }
+    100% { box-shadow: 0 0 5px rgba(59, 130, 246, 0.2); }
+}
+
+.publication-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.elite-tag {
+    font-size: 0.85rem;
+    color: var(--accent-purple);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.publication-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.publication-meta span {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.publication-meta span i {
+    color: var(--accent-blue);
+}
+
+.publication-description {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.publication-highlights {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.publication-highlights li {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.publication-highlights li i {
+    color: var(--accent-blue);
+    margin-top: 4px;
+}
+
+.publication-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+@media (max-width: 992px) {
+    .publication-card {
+        flex-direction: column;
+    }
+    
+    .publication-image {
+        height: 250px;
+        min-width: 100%;
+    }
+    
+    .publication-content {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .publication-actions {
+        flex-direction: column;
+    }
+    
+    .publication-meta {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
+
 /* Skills Section */
 .skills-section {
     padding: var(--section-padding);
