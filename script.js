@@ -151,3 +151,57 @@ filterBtns.forEach(btn => {
         });
     });
 });
+
+// Secure Email Obfuscation & Contact Form Handling
+document.addEventListener("DOMContentLoaded", () => {
+    const _u = "piyushbhardwaj634";
+    const _d = "gmail.com";
+    
+    function getSecureEmail() {
+        return `${_u}@${_d}`;
+    }
+
+    // Secure Email Card Click Handler
+    const emailCard = document.getElementById("secure-email-card");
+    if (emailCard) {
+        emailCard.addEventListener("click", (e) => {
+            e.preventDefault();
+            window.location.href = `mailto:${getSecureEmail()}`;
+        });
+    }
+
+    // Contact Form Submission Handler
+    const contactForm = document.getElementById("contact-form");
+    if (contactForm) {
+        contactForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById("form-name").value;
+            const clientEmail = document.getElementById("form-email").value;
+            const subject = document.getElementById("form-subject").value;
+            const message = document.getElementById("form-message").value;
+            
+            const secureEmail = getSecureEmail();
+            const bodyText = `Hi Piyush,\n\nMy name is ${name} (${clientEmail}).\n\n${message}`;
+            const mailtoLink = `mailto:${secureEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
+            
+            // Open the user's mail application
+            window.location.href = mailtoLink;
+            
+            // Provide visual feedback
+            const submitBtn = contactForm.querySelector(".form-submit-btn");
+            const originalContent = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> Opening Mail Client...';
+            submitBtn.style.background = 'var(--accent-purple)';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                submitBtn.innerHTML = originalContent;
+                submitBtn.style.background = '';
+                submitBtn.disabled = false;
+                contactForm.reset();
+            }, 3000);
+        });
+    }
+});
