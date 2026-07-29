@@ -254,6 +254,112 @@ ul {
     color: var(--text-primary);
 }
 
+/* Experience Section & Timeline */
+.experience-section {
+    padding: var(--section-padding);
+    background-color: var(--bg-primary);
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 2rem auto 0 auto;
+    padding-left: 2rem;
+    border-left: 2px solid rgba(59, 130, 246, 0.3);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -2.55rem;
+    top: 0.25rem;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent-blue);
+    border: 3px solid var(--bg-primary);
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.8);
+}
+
+.timeline-content {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform var(--transition-medium), border-color var(--transition-medium);
+}
+
+.timeline-content:hover {
+    transform: translateY(-4px);
+    border-color: rgba(59, 130, 246, 0.3);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.4);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.role-title {
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.company-name {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-top: 0.25rem;
+}
+
+.experience-date {
+    font-size: 0.85rem;
+    color: var(--accent-blue);
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.experience-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.experience-bullets li {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.bullet-icon {
+    color: var(--accent-blue);
+    margin-top: 0.3rem;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
 /* Achievements Section */
 .achievements-section {
     padding: var(--section-padding);
@@ -300,6 +406,27 @@ ul {
     color: var(--text-secondary);
 }
 
+.github-badge-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    transition: all var(--transition-fast);
+}
+
+.github-badge-tag:hover {
+    border-color: var(--accent-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+}
+
 /* Projects Section */
 .projects-section {
     padding: var(--section-padding);
@@ -341,6 +468,43 @@ ul {
 
 .project-card:hover .project-image img {
     transform: scale(1.05);
+}
+
+.dynamic-repo-image {
+    background: linear-gradient(135deg, #1e293b, #0b0f19);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.repo-visual-fallback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    color: var(--text-secondary);
+    transition: transform var(--transition-medium);
+}
+
+.project-card:hover .repo-visual-fallback {
+    transform: scale(1.1);
+    color: var(--accent-blue);
+}
+
+.repo-visual-fallback i {
+    font-size: 4rem;
+    opacity: 0.8;
+}
+
+.repo-lang-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .project-links-overlay {
