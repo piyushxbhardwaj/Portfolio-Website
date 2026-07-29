@@ -41,19 +41,27 @@ window.addEventListener('scroll', () => {
 // Scroll Reveal Animation
 const revealElements = document.querySelectorAll('.reveal');
 
+const checkReveals = () => {
+    revealElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        if (rect.top <= windowHeight + 100) {
+            el.classList.add('active');
+        }
+    });
+};
+
 const revealCallback = (entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('active');
-            // Optional: unobserve if you only want it to reveal once
-            // observer.unobserve(entry.target);
         }
     });
 };
 
 const revealOptions = {
-    threshold: 0.15,
-    rootMargin: "0px 0px -50px 0px"
+    threshold: 0.02,
+    rootMargin: "0px 0px 100px 0px"
 };
 
 const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
@@ -61,6 +69,11 @@ const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
 revealElements.forEach(el => {
     revealObserver.observe(el);
 });
+
+// Run immediate reveal checks
+window.addEventListener('DOMContentLoaded', checkReveals);
+window.addEventListener('load', checkReveals);
+window.addEventListener('scroll', checkReveals);
 
 // Update Active Nav Link on Scroll
 const sections = document.querySelectorAll('section, header, footer');
@@ -98,6 +111,7 @@ let textArrayIndex = 0;
 let charIndex = 0;
 
 function type() {
+  if (!typedTextSpan || !cursorSpan) return;
   if (charIndex < textArray[textArrayIndex].length) {
     if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
     typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
@@ -111,6 +125,7 @@ function type() {
 }
 
 function erase() {
+  if (!typedTextSpan || !cursorSpan) return;
   if (charIndex > 0) {
     if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
     typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
@@ -238,6 +253,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return response.json();
         })
         .then(repos => {
+            if (!Array.isArray(repos)) return;
             // Filter out forks and repositories already rendered statically
             const newRepos = repos.filter(repo => {
                 if (repo.fork) return false;
